@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Holographic Card | Unique Feature</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../shared/mobile.css" />
+    <link rel="stylesheet" href="../shared/experience-kit.css" />
+    <link rel="stylesheet" href="../shared/fx-kit.css" />
+    <link rel="stylesheet" href="../shared/engagement-kit.css" />
+    <link rel="stylesheet" href="../shared/soundkit.css" />
+</head>
+<body>
+    <div id="loader">
+        <p style="letter-spacing: 5px; font-size: 0.7rem;">PROJECTION BOOT...</p>
+    </div>
+
+    <div class="feature-tag">CORE_FEATURE_28</div>
+
+    <audio id="bg-audio" loop>
+        <source src="https://cdn.pixabay.com/audio/2021/11/25/audio_1e3a9a1e9a.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="audio-toggle">🎵</button>
+
+    <div id="app">
+        <div class="card-container" id="card">
+            <div class="card">
+                <div style="font-size: 0.6rem; opacity: 0.5;">DECENTRALIZED IDENTITY</div>
+                <h2 class="card-title">VOID_RUNNER</h2>
+                <div style="margin-top: 20px; font-size: 0.7rem;">LEVEL: 99</div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="github-badge">
+        <a href="https://github.com/AkshatRock/weboreel-hackathon" target="_blank">⭐ GitHub Repo</a>
+        <span>VishwaNova 2026</span>
+    </footer>
+
+    <script src="../shared/soundkit.js" defer></script>
+    <script src="../shared/experience-kit.js" defer></script>
+    <script src="../shared/engagement-kit.js" defer></script>
+    <script src="../shared/experience-configs-22-50.js" defer></script>
+    <script src="../shared/fx-kit.js" defer></script>
+    <script src="script.js"></script>
+
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        const parts = location.pathname.split("/").filter(Boolean);
+        const slug = parts[parts.length - 2] || "";
+        const cfg = window.WeboReelsExperienceConfigs22to50?.[slug] || { title: document.title };
+        window.WeboReelsExperienceKit?.init?.(cfg);
+      });
+    </script>
+</body>
+</html>
